@@ -1,0 +1,15 @@
+#Program 1.7
+
+import numpy as np
+import os
+old = np.arange(16).reshape(4, 4)
+print("Old Array:")
+print("------------")
+print(old)
+print()
+header = 'New Array'
+np.savetxt('p1.7.txt', old, fmt="%d", header=header) 
+print("New Array:")
+print("------------")
+new = np.loadtxt('p1.7.txt')
+print(new)
