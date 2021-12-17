@@ -1,0 +1,41 @@
+#Program 3.6
+
+import matplotlib.pyplot as plt
+x = ['Java', 'Python', 'PHP', 'JavaScript', 'C#', 'C++']
+popularity = [22.2, 17.6, 8.8, 8, 7.7, 6.7]
+
+# Question 1
+
+x_pos = [i for i, _ in enumerate(x)]
+plt.bar(x_pos, popularity, color=(0.4, 0.6, 0.8, 1.0))
+plt.xlabel("Languages")
+plt.ylabel("Popularity")
+plt.title("Popularity of Programming Languages\n")
+plt.xticks(x_pos, x)
+plt.minorticks_on()
+
+plt.show()
+
+# Question 2
+
+x_pos = [i for i, _ in enumerate(x)]
+plt.barh(x_pos, popularity, color='red')
+plt.xlabel("Popularity")
+plt.ylabel("Languages")
+plt.title("Popularity of Programming Language\n")
+plt.yticks(x_pos, x)
+plt.minorticks_on()
+plt.show()
+
+# Question 3
+
+x_pos = [i for i, _ in enumerate(x)]
+
+plt.bar(x_pos, popularity, color=['black', 'blue', 'red', 'yellow', 'cyan','orange'])
+
+plt.xlabel("Languages")
+plt.ylabel("Popularity")
+plt.title("PopularitY of Programming Language\n")
+plt.xticks(x_pos, x)
+plt.minorticks_on()
+plt.show()
